@@ -1,0 +1,9 @@
+---
+- name: Up and Run gitlab instance
+  hosts: all
+
+  roles:
+    - role: docker
+      become: true
+    - role: gitlab
+      become: true
