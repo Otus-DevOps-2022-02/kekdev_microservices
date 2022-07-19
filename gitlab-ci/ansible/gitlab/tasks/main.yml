@@ -1,0 +1,19 @@
+---
+- name: Create gitlab directories
+  file:
+    path: "{{ item }}"
+    recurse: true
+    state: directory
+  with_list:
+    - /srv/gitlab/config
+    - /srv/gitlab/data
+    - /srv/gitlab/logs
+
+- name: Upload docker docker-compose
+  template:
+    src: docker-compose.yml
+    dest: /srv/gitlab
+
+- name: Start service
+  docker_compose:
+    project_src: /srv/gitlab
