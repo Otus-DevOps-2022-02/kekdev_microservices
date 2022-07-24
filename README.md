@@ -1,6 +1,10 @@
 # kekdev_microservices
 kekdev microservices repository
 
+## monitoring-1
+Добавлен сервис prometheus для мониторинга приложения
+Ссылка на хаб: https://hub.docker.com/u/luprux
+
 ## gitlab-ci-1
 Добавлено развёртывание инстанса гитлаба с помощью терраформ
 Добавлен скрипт ci для gitlab
